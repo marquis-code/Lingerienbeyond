@@ -16,12 +16,12 @@ export default defineNuxtConfig({
       enabled: true
     },
     meta: {
-      title: "Buildr",
+      title: "Lingerie 'n' beyond",
       author: "Marquis",
       mobileAppIOS: false,
       mobileApp: true,
       description:
-        "specialize in software development, product design, and bespoke solutions to help businesses innovate and thrive in the digital age.",
+        "Ons stop shop for all your clothings,",
       theme_color: "#27396B",
       background_color: "#27396B",
       display: "standalone",
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       sizes: [64, 120, 144, 152, 192, 384, 512],
     },
     manifest: {
-      name: "Achilles Drill",
+      name: "Lingerie 'n' beyond",
       lang: "fa",
       useWebmanifestExtension: false,
     },
