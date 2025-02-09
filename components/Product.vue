@@ -255,20 +255,6 @@
     closeModal();
 };
 
-
-  // const submitOrder = () => {
-  //   const message = `Order Details:
-  //   - Name: ${orderDetails.value.name}
-  //   - Phone: ${orderDetails.value.phone}
-  //   - Delivery Option: ${orderDetails.value.deliveryOption}
-  //   - Address: ${orderDetails.value.address || 'N/A'}
-  //   - Payment Method: ${orderDetails.value.paymentOption}
-  //   - Selected Package: ${props.product.name}
-  //   - Price: ${props.product.new_price}`;
-  
-  //   window.open(`https://wa.me/2349012345678?text=${encodeURIComponent(message)}`, '_blank');
-  //   closeModal();
-  // };
   
   // Cleanup on component unmount
   onUnmounted(() => {
