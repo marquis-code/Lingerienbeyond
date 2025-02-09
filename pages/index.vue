@@ -1,24 +1,11 @@
 <template>
   <main>
-    <!-- <hero-section id="about-section" />
-    <hero-feature id="services-section" />
-    <feature-one id="services-section" />
-    <feature-two id="services-section" />
-    <feature-three id="services-section" />
-    <feature-four id="services-section" />
-    <stat-section />
-    <updated-testimonials class="" />
-    <cta-section />
-    <image-carousel id="projects"></image-carousel>
-    <frequently-asked-questions />
-    <contact-section id="contact-section" />
-    <footer-section /> -->
-    <div class="relative bg-white">
+    <div class="relative bg-white mb-20">
   <!-- Background image and overlap -->
   <div aria-hidden="true" class="absolute inset-0 hidden sm:flex sm:flex-col">
     <div class="relative w-full flex-1 bg-gray-800">
       <div class="absolute inset-0 overflow-hidden">
-        <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-04-hero-full-width.jpg" alt="" class="w-full h-full object-cover">
+        <img src="@/assets/img/women-gifts.jpg" alt="" class="w-full h-full object-cover">
       </div>
       <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
     </div>
@@ -30,7 +17,7 @@
     <div aria-hidden="true" class="absolute inset-0 flex flex-col sm:hidden">
       <div class="relative w-full flex-1 bg-gray-800">
         <div class="absolute inset-0 overflow-hidden">
-          <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-04-hero-full-width.jpg" alt="" class="size-full object-cover">
+          <img src="@/assets/img/women-gifts.jpg" alt="" class="h-full w-full object-cover">
         </div>
         <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
       </div>
@@ -38,20 +25,20 @@
     </div>
     <div class="relative py-32">
       <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">Lingerie 'n' beyond</h1>
-      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">Valentine Sale</h1>
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">Valentine Sales</h1>
       <div class="mt-4 sm:mt-6">
-        <a href="https://api.whatsapp.com/send?phone=+2348186109007" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 font-medium text-white hover:bg-indigo-700">Shop Collection</a>
+        <a href="#collections" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 font-medium text-white hover:bg-indigo-700">Shop Collection</a>
       </div>
     </div>
   </div>
 
-  <section aria-labelledby="collection-heading" class="relative -mt-96 sm:mt-0">
+  <section id="collections" aria-labelledby="collection-heading" class="relative -mt-96 sm:mt-0">
     <h2 id="collection-heading" class="sr-only">Collections</h2>
     <div class="mx-auto grid max-w-md grid-cols-1 gap-y-6 px-4 sm:max-w-7xl sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:px-6 lg:gap-x-8 lg:px-8">
-      <div class="group relative h-96 rounded-lg bg-white shadow-xl sm:aspect-[4/5] sm:h-auto">
+      <div @click="router.push('/products/women')" class="group relative h-96 rounded-lg bg-white shadow-xl sm:aspect-[4/5] sm:h-auto">
         <div aria-hidden="true" class="absolute inset-0 overflow-hidden rounded-lg">
           <div class="absolute inset-0 overflow-hidden group-hover:opacity-75">
-            <img src="@/assets/img/women-package.jpg" alt="Woman wearing an off-white cotton t-shirt." class="size-full object-cover">
+            <img src="@/assets/img/women-package.jpg" alt="Woman wearing an off-white cotton t-shirt." class="h-full w-full object-cover">
           </div>
           <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
         </div>
@@ -59,18 +46,18 @@
           <div>
             <p aria-hidden="true" class="text-sm text-white">Shop the collection</p>
             <h3 class="mt-1 font-semibold text-white">
-              <a href="https://api.whatsapp.com/send?phone=+2348186109007">
+              <NuxtLink to="/products/women">
                 <span class="absolute inset-0"></span>
                 Women&#039;s Valentine Specials
-              </a>
+              </NuxtLink>
             </h3>
           </div>
         </div>
       </div>
-      <div class="group relative h-96 rounded-lg bg-white shadow-xl sm:aspect-[4/5] sm:h-auto">
+      <div @click="router.push('/products/men')" class="group relative h-96 rounded-lg bg-white shadow-xl sm:aspect-[4/5] sm:h-auto">
         <div aria-hidden="true" class="absolute inset-0 overflow-hidden rounded-lg">
           <div class="absolute inset-0 overflow-hidden group-hover:opacity-75">
-            <img src="@/assets/img/men-package.jpg" alt="Man wearing a charcoal gray cotton t-shirt." class="size-full object-cover">
+            <img src="@/assets/img/men-package.jpg" alt="Man wearing a charcoal gray cotton t-shirt." class="h-full w-full object-cover">
           </div>
           <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
         </div>
@@ -78,18 +65,18 @@
           <div>
             <p aria-hidden="true" class="text-sm text-white">Shop the collection</p>
             <h3 class="mt-1 font-semibold text-white">
-              <a href="https://api.whatsapp.com/send?phone=+2348186109007">
+              <NuxtLink to="/products/men">
                 <span class="absolute inset-0"></span>
                 Men&#039;s Valentine  Specials
-              </a>
+              </NuxtLink>
             </h3>
           </div>
         </div>
       </div>
-      <div class="group relative h-96 rounded-lg bg-white shadow-xl sm:aspect-[4/5] sm:h-auto">
+      <div @click="router.push('/products/men')" class="group relative h-96 rounded-lg bg-white shadow-xl sm:aspect-[4/5] sm:h-auto">
         <div aria-hidden="true" class="absolute inset-0 overflow-hidden rounded-lg">
           <div class="absolute inset-0 overflow-hidden group-hover:opacity-75">
-            <img src="@/assets/img/gifts.jpg" alt="Man wearing a charcoal gray cotton t-shirt." class="size-full h-full object-cover">
+            <img src="@/assets/img/gifts.jpg" alt="Man wearing a charcoal gray cotton t-shirt." class="h-full w-full h-full object-cover">
           </div>
           <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
         </div>
@@ -97,33 +84,14 @@
           <div>
             <p aria-hidden="true" class="text-sm text-white">Shop the collection</p>
             <h3 class="mt-1 font-semibold text-white">
-              <a href="https://api.whatsapp.com/send?phone=+2348186109007">
+              <NuxtLink to="/products/women">
                 <span class="absolute inset-0"></span>
                 Valentine Gift packaging
-              </a>
+              </NuxtLink>
             </h3>
           </div>
         </div>
       </div>
-      <!-- <div class="group relative h-96 rounded-lg bg-white shadow-xl sm:aspect-[4/5] sm:h-auto">
-        <div aria-hidden="true" class="absolute inset-0 overflow-hidden rounded-lg">
-          <div class="absolute inset-0 overflow-hidden group-hover:opacity-75">
-            <img src="@/assets/img/women-gifts.jpg" alt="Person sitting at a wooden desk with paper note organizer, pencil and tablet." class="size-full object-cover">
-          </div>
-          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
-        </div>
-        <div class="absolute inset-0 flex items-end rounded-lg p-6">
-          <div>
-            <p aria-hidden="true" class="text-sm text-white">Shop the collection</p>
-            <h3 class="mt-1 font-semibold text-white">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                Desk Accessories
-              </a>
-            </h3>
-          </div>
-        </div>
-      </div> -->
     </div>
   </section>
 </div>
@@ -135,5 +103,6 @@
 
 <script setup lang="ts">
 const openSidebar = ref(false);
+const router = useRouter()
 const speed = ref(10);
 </script>

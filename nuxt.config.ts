@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       mobileAppIOS: false,
       mobileApp: true,
       description:
-        "Ons stop shop for all your clothings,",
+        "One stop shop for all your clothings,",
       theme_color: "#27396B",
       background_color: "#27396B",
       display: "standalone",
