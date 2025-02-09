@@ -18,11 +18,6 @@
               alt="For Him"
               class="h-full w-full rounded-bl-3xl rounded-tr-3xl border border-gray-300 object-cover"
             />
-            <!-- <img
-              :src="userType === 'her' ? '/for-her.jpg' : '/for-him.jpg'"
-              :alt="userType === 'her' ? 'For Her' : 'For Him'"
-              class="h-full w-full rounded-bl-3xl rounded-tr-3xl border border-gray-300 object-cover"
-            /> -->
             <div class="absolute inset-0 bg-black/50 flex items-center justify-center rounded-bl-3xl rounded-tr-3xl">
               <h3 class="text-2xl font-semibold text-white text-center px-4">
                 {{ product?.name ?? 'Nil' }}
@@ -76,7 +71,8 @@
               <h3 class="text-2xl font-semibold text-gray-900">Complete Your Order</h3>
               <p class="mt-2 text-gray-600">Enter your details to proceed with your order.</p>
   
-              <form @submit.prevent="submitOrder" class="mt-4">
+              <div class="max-h-[400px] overflow-y-auto custom-scrollbar mt-4 pr-2">
+                <form @submit.prevent="submitOrder" class="mt-4">
                 <!-- Full Name -->
                 <div class="mb-4">
                   <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
@@ -175,6 +171,7 @@
                   </button>
                 </div>
               </form>
+              </div>
             </div>
           </div>
         </Transition>
@@ -270,6 +267,24 @@
       transform: scale(1);
     }
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
   
   .animate-fadeIn {
     animation: fadeIn 0.3s ease-out forwards;
