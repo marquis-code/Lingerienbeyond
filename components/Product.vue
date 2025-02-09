@@ -237,18 +237,38 @@
   };
   
   const submitOrder = () => {
-    const message = `Order Details:
-    - Name: ${orderDetails.value.name}
-    - Phone: ${orderDetails.value.phone}
-    - Delivery Option: ${orderDetails.value.deliveryOption}
-    - Address: ${orderDetails.value.address || 'N/A'}
-    - Payment Method: ${orderDetails.value.paymentOption}
-    - Selected Package: ${props.product.name}
-    - Price: ${props.product.new_price}`;
-  
-    window.open(`https://wa.me/09012345678?text=${encodeURIComponent(message)}`, '_blank');
+  // Build the WhatsApp message text dynamically
+  const message = `Hello,%20I%20would%20like%20to%20place%20an%20order.%20Here%20are%20my%20details:%0A%0A` +
+    `Name:%20${encodeURIComponent(orderDetails.value.name)}%0A` +
+    `Phone:%20${encodeURIComponent(orderDetails.value.phone)}%0A` +
+    `Delivery%20Option:%20${encodeURIComponent(orderDetails.value.deliveryOption)}%0A` +
+    (orderDetails.value.deliveryOption === "delivery"
+      ? `Address:%20${encodeURIComponent(orderDetails.value.address || "N/A")}%0A`
+      : "") +
+    `Payment%20Method:%20${encodeURIComponent(orderDetails.value.paymentOption)}%0A` +
+    `Selected%20Package:%20${encodeURIComponent(props.product.name)}%0A` +
+    `Price:%20${encodeURIComponent(props.product.new_price)}%0A%0A` +
+    `Thank%20you!`;
+
+    // Open WhatsApp with the generated message
+    window.open(`https://wa.me/2349012345678?text=${message}`, "_blank");
     closeModal();
-  };
+};
+
+
+  // const submitOrder = () => {
+  //   const message = `Order Details:
+  //   - Name: ${orderDetails.value.name}
+  //   - Phone: ${orderDetails.value.phone}
+  //   - Delivery Option: ${orderDetails.value.deliveryOption}
+  //   - Address: ${orderDetails.value.address || 'N/A'}
+  //   - Payment Method: ${orderDetails.value.paymentOption}
+  //   - Selected Package: ${props.product.name}
+  //   - Price: ${props.product.new_price}`;
+  
+  //   window.open(`https://wa.me/2349012345678?text=${encodeURIComponent(message)}`, '_blank');
+  //   closeModal();
+  // };
   
   // Cleanup on component unmount
   onUnmounted(() => {

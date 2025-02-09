@@ -29,7 +29,7 @@
             </div>
         </div>
 
-       <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-10 mt-20 container mx-auto p-6 lg:p-0">
+       <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 max-w-7xl lg:gap-10 mt-20 container mx-auto p-6 lg:p-0">
         <Product
            userType="her"
             v-for="item in menPackages"
